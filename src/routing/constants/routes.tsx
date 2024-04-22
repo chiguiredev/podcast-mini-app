@@ -14,10 +14,10 @@ export const routes = createBrowserRouter([
       const LIMIT = 100;
       const GENRE = 1303;
 
-      const podcastList = await getPodcastList(
-        LIMIT.toString(),
-        GENRE.toString(),
-      );
+      const podcastList = await getPodcastList({
+        limit: LIMIT.toString(),
+        genre: GENRE.toString(),
+      });
       return podcastList;
     },
   },

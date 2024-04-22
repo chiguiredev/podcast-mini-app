@@ -1,3 +1,13 @@
+import { PodcastsGrid } from "../../../components/PodcastGrid/PodcastGrid";
+
 export function HomePage() {
-  return <div>Welcome to the jungle</div>;
+  return (
+    <>
+      <PodcastsGrid>
+        <div>Podcasts Detail Page</div>
+        <div>Podcasts Episode Page</div>
+        <div>Welcome to the jungle</div>
+      </PodcastsGrid>
+    </>
+  );
 }
