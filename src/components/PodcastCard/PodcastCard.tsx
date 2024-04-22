@@ -12,7 +12,7 @@ export function PodcastCard({ podcast }: PodcastCardProps) {
   const image = podcast["im:image"][2].label;
 
   return (
-    <Link to={`/podcasts/${podcast.id.attributes["im:id"]}`}>
+    <Link to={`/podcast/${podcast.id.attributes["im:id"]}`}>
       <article className="podcast_card__container">
         <img
           className="podcast_card__container_image"

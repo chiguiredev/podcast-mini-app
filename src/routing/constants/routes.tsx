@@ -23,7 +23,7 @@ export const routes = createBrowserRouter([
     },
   },
   {
-    path: "/podcasts/:podcastId",
+    path: "/podcast/:podcastId",
     element: <RouteDataHOC Component={PodcastsDetailPage} />,
   },
   {
