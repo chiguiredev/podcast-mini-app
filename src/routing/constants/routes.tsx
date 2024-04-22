@@ -18,6 +18,7 @@ export const routes = createBrowserRouter([
         limit: LIMIT.toString(),
         genre: GENRE.toString(),
       });
+
       return podcastList;
     },
   },

@@ -1,12 +1,28 @@
 import { PodcastsGrid } from "../../../components/PodcastGrid/PodcastGrid";
+import { PodcastCard } from "../../../components/PodcastCard/PodcastCard";
+import { Author, Entry } from "../../dataLoaders/types";
 
-export function HomePage() {
+interface HomePageProps {
+  loaderData: {
+    feed: {
+      author: Author;
+      entry: Entry[];
+    };
+  };
+  params: Record<string, string>;
+}
+
+export function HomePage({ loaderData }: HomePageProps) {
+  const {
+    feed: { entry },
+  } = loaderData;
+
   return (
     <>
       <PodcastsGrid>
-        <div>Podcasts Detail Page</div>
-        <div>Podcasts Episode Page</div>
-        <div>Welcome to the jungle</div>
+        {entry?.map((podcast) => (
+          <PodcastCard key={podcast.id.attributes["im:id"]} podcast={podcast} />
+        ))}
       </PodcastsGrid>
     </>
   );

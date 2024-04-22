@@ -1,0 +1,8 @@
+$podcast-grid-gap: 1rem;
+$podcast-grid-min-width: 16rem;
+
+.podcast_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($podcast-grid-min-width, 1fr));
+    gap: $podcast-grid-gap;
+}
